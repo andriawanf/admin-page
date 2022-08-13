@@ -19,57 +19,57 @@
 
 </head>
 <body style="font-family: 'Poppins', sans-serif; " class=" bg-white">
-   <div class="flex gap-8">
+   <div class="flex gap-8" >
         <!-- Sidebar Start -->
-       <aside class="w-64 relative sm:relative bg-gray-800 shadow md:h-full flex-col justify-between hidden sm:flex" aria-label="Sidebar">
-           <div class="overflow-y-auto py-6 px-3 bg-white shadow-lg rounded dark:bg-gray-800 h-screen flex flex-col justify-between">
-               <div class="px-2 cursor-pointer">
-                   <a href="https://flowbite.com/" class="flex items-center mb-10 justify-between">
-                       <span class="text-2xl font-bold">Shipper-Men</span>
-                       <div class="absolute right-0 float-right -mr-4">
-                           <i class="py-1 px-1 rounded-full bg-gray-600 bx bx-chevron-left bx-sm text-white"></i>
-                       </div>
-                   </a>
-                   <ul class="space-y-6 mb-6 ">
+       <aside class="sticky top-0 h-full w-64 sm:relative bg-gray-800 shadow md:h-full flex-col justify-between hidden sm:flex transition-all duration-300" aria-label="Sidebar" x-data="{ sidebarOpen: true }" :class="{ '-ml-64': !sidebarOpen }">
+           <div class="overflow-y-auto py-6 px-3 bg-white shadow-lg rounded dark:bg-gray-800 h-screen flex flex-col justify-between" >
+               <div class="px-2 cursor-pointer" >
+                   <a href="#" class="flex items-center mb-10 justify-between">
+                       <span class="text-2xl font-bold z-30 text-white">Shipper-Men</span>
+                    </a>
+                    <div class="absolute right-0 float-right -mr-9 top-6 w-64 h-9 rounded-lg bg-red-500 shadow-lg " @click="sidebarOpen = !sidebarOpen" >
+                            <p class="text-right text-gray-600"><i class="bx bx-chevron-right bx-md"></i></p>
+                    </div>
+                   <ul class="space-y-6 mb-10 ">
                         <li class="flex w-full justify-between text-black cursor-pointer items-center">
                             <a href="javascript:void(0)" class="flex items-center gap-4">
-                                <i class="bx bx-time-five bx-sm"></i>
-                                <span class="text-black font-medium  hover:text-blue-500 transition duration-300">Request</span>
+                                <i class="bx bx-time-five "></i>
+                                <span class="text-black font-medium text-sm  hover:text-blue-500 transition duration-300">Request</span>
                             </a>
                             <div class="py-1 px-3 bg-gray-600 rounded text-gray-300 flex items-center justify-center text-xs">16</div>
                         </li>
                         <li class="flex w-full justify-between text-black cursor-pointer items-center">
                             <a href="javascript:void(0)" class="flex items-center gap-4">
-                                <i class="bx bx-bell bx-sm"></i>
-                                <span class="text-black font-medium hover:text-blue-500 transition duration-300">Notification</span>
+                                <i class="bx bx-bell"></i>
+                                <span class="text-black font-medium text-sm hover:text-blue-500 transition duration-300">Notification</span>
                             </a>
                             <div class="py-1 px-3 bg-gray-600 rounded text-gray-300 flex items-center justify-center text-xs">5</div>
                         </li>
                    </ul>
-                   <div class="pt-6 border-t">
+                   <div class="pt-10 border-t">
                        <ul class="space-y-6 ">
                            <li class="flex gap-4">
-                               <i class="bx bx-category bx-sm"></i>
-                               <span class="text-base font-medium">Dashboard</span>
+                               <i class="bx bx-category "></i>
+                               <span class="text-sm font-medium ">Dashboard</span>
                            </li>
                            <li class="flex gap-4">
-                               <i class="bx bx-trip bx-sm"></i>
-                               <span class="text-base font-medium">Shipments</span>
+                               <i class="bx bx-trip "></i>
+                               <span class="text-sm font-medium">Shipments</span>
                            </li>
                            <li class="flex w-full justify-between items-center">
                                 <a href="/" class="flex items-center gap-4">
-                                    <i class="bx bx-package bx-sm"></i>
-                                    <span class="text-base font-medium">Parcels</span>
+                                    <i class="bx bx-package "></i>
+                                    <span class="text-sm font-medium">Parcels</span>
                                 </a>
                                 <div class="py-1 px-3 bg-red-500  rounded text-white flex items-center justify-center text-xs">5</div>
                            </li>
                            <li class="flex gap-4">
-                               <i class="bx bx-flag bx-sm"></i>
-                               <span class="text-base font-medium">Branches</span>
+                               <i class="bx bx-flag "></i>
+                               <span class="text-sm font-medium">Branches</span>
                            </li>
                            <li class="flex gap-4">
-                               <i class="bx bx-group bx-sm"></i>
-                               <span class="text-base font-medium">Clients</span>
+                               <i class="bx bx-group "></i>
+                               <span class="text-sm font-medium">Clients</span>
                            </li>
                        </ul>
                    </div>
@@ -104,7 +104,7 @@
 
        <main class="w-full pr-6">
             <!-- Nav Start -->
-            <nav class="bg-white px-2 py-2 w-full mt-3 shadow rounded mx-auto">
+            <nav class="bg-white px-2 py-2 w-full mt-3 shadow rounded-lg mx-auto sticky top-3 ml-4">
                 <div class="flex justify-between">
                     <div class="flex justify-start item-center relative w-full">
                         <input type="search" name="search" placeholder="Search..." class="text-sm leading-none pl-10 py-3 text-left text-gray-600 w-full rounded outline-none border-none relative">
@@ -155,7 +155,7 @@
                         </div>
                         <div x-data="app()" x-init="[initDate(), getNoOfDays()]" x-cloak>
                             <div class=" ">
-                                <div class="w-64">
+                                <div class="w-44">
                                     <div class="relative">
                                         <input type="hidden" name="date" x-ref="date">
                                         <input 
@@ -164,7 +164,7 @@
                                             x-model="datepickerValue"
                                             @click="showDatepicker = !showDatepicker"
                                             @keydown.escape="showDatepicker = false"
-                                            class="w-full border-none rounded text-gray-600 text-sm font-medium mt-1 "
+                                            class="w-full border-none rounded text-gray-600 text-sm font-medium mt-1 bg-white"
                                             placeholder="Select date">
                   
                                             <div class="absolute top-0 right-0 px-3 py-2">
@@ -261,14 +261,14 @@
                         </div>
                     </div>
                     <div class="flex gap-4">
-                        <div class="dropdown-one  rounded  w-full outline-none relative">
+                        <div class="dropdown-one  rounded  w-full outline-none relative -z-10">
                             <button onclick="showDropDownMenu_search(this)" class="dropbtn-one relative px-5 py-[12px] flex items-center justify-between w-full">
-                                <span class="pr-4 font-normal text-gray-600 text-xs" id="drop-down-content-setter_search">
+                                <span class="pr-4 font-normal text-gray-600 text-xs" >
                                     Short by:
                                 </span>
                                 <i class="bx bx-chevron-down"></i>
                             </button>
-                            <div class="hidden rounded w-full shadow border-t border-gray-200 px-1 py-2 absolute top-12 right-0 bg-white" id="drop-down-div_search">
+                            <div class="hidden rounded w-full shadow border-t border-gray-200 px-1 py-2 absolute top-12 right-0 bg-white" >
                                 <a href="javascript:void(0)" class="hover">
                                     <p class="text-sm leading-none text-gray-600 p-3 hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded cursor-pointer" onclick="swaptext_search(this)">Time</p>
                                     </a>
@@ -282,7 +282,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="dropdown-one  rounded  w-full outline-none relative">
+                        <div class="dropdown-one  rounded  w-full outline-none relative -z-10">
                             <button onclick="showDropDownMenu_search(this)" class="dropbtn-one relative px-5 py-[12px] flex items-center justify-between w-full">
                                 <span class="pr-4 font-normal text-gray-600 text-xs" id="drop-down-content-setter_search">
                                     Departure date:
@@ -347,18 +347,110 @@
                             <div class="card bg-white shadow-lg px-4 py-4">
                                 <div class="flex justify-between">
                                     <div>
-                                        <span class="font-semibold text-lg">Purwokerto Timur</span>
-                                        <span class="font-light text-sm ml-2">03 August, 2022</span>
+                                        <span class="font-semibold text-lg">Purwokerto Barat</span>
+                                        <span class="font-light text-sm ml-2">01 August, 2022</span>
                                     </div>
                                     <div>
-                                        <h1 class="text-2xl font-semibold text-red-500">90%</h1>
+                                        <h1 class="text-2xl font-semibold text-red-500">50%</h1>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex flex-col gap-4 mt-4">
+                                        <div class="mt-4">
+                                            <p class="text-gray-600 text-base mb-2">Available, kg</p>
+                                            <p class="font-semibold text-base text-red-500">100<span class="text-gray-600">/200</span> </p>
+                                        </div>
+                                        <div class="mt-4">
+                                            <p class="text-gray-600 text-base mb-2">shipment number</p>
+                                            <p class="font-semibold text-base text-red-500">V563411</p>
+                                        </div>
+                                        <div class="mt-4">
+                                            <p class="text-gray-600 text-base mb-2">expedition</p>
+                                            <p class="font-semibold text-base text-red-500">Sicepat</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-4">
+                                        <p class="mb-2 mt-4 text-gray-600 text-sm">Box trucks</p>
+                                        <div class="bg-gray-200 w-[350px] h-[150px] rounded-lg shadow-lg">
+                                            <div class="card w-[175px] h-full bg-gradient-to-r from-red-300 via-red-400 to-red-500 rounded-l-lg"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Cols Card Two -->
-                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="card bg-white shadow-lg px-4 py-4">
+                                <div class="flex justify-between">
+                                    <div>
+                                        <span class="font-semibold text-lg">Purwokerto Selatan</span>
+                                        <span class="font-light text-sm ml-2">10 August, 2022</span>
+                                    </div>
+                                    <div>
+                                        <h1 class="text-2xl font-semibold text-red-500">25%</h1>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex flex-col gap-4 mt-4">
+                                        <div class="mt-4">
+                                            <p class="text-gray-600 text-base mb-2">Available, kg</p>
+                                            <p class="font-semibold text-base text-red-500">50<span class="text-gray-600">/200</span> </p>
+                                        </div>
+                                        <div class="mt-4">
+                                            <p class="text-gray-600 text-base mb-2">shipment number</p>
+                                            <p class="font-semibold text-base text-red-500">V335468</p>
+                                        </div>
+                                        <div class="mt-4">
+                                            <p class="text-gray-600 text-base mb-2">expedition</p>
+                                            <p class="font-semibold text-base text-red-500">JNT</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-4">
+                                        <p class="mb-2 mt-4 text-gray-600 text-sm">Box trucks</p>
+                                        <div class="bg-gray-200 w-[350px] h-[150px] rounded-lg shadow-lg">
+                                            <div class="card w-[88px] h-full bg-gradient-to-r from-red-300 via-red-400 to-red-500 rounded-l-lg"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-white shadow-lg px-4 py-4">
+                                <div class="flex justify-between">
+                                    <div>
+                                        <span class="font-semibold text-lg">Purwokerto Utara</span>
+                                        <span class="font-light text-sm ml-2">13 August, 2022</span>
+                                    </div>
+                                    <div>
+                                        <h1 class="text-2xl font-semibold text-red-500">75%</h1>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex flex-col gap-4 mt-4">
+                                        <div class="mt-4">
+                                            <p class="text-gray-600 text-base mb-2">Available, kg</p>
+                                            <p class="font-semibold text-base text-red-500">150<span class="text-gray-600">/200</span> </p>
+                                        </div>
+                                        <div class="mt-4">
+                                            <p class="text-gray-600 text-base mb-2">shipment number</p>
+                                            <p class="font-semibold text-base text-red-500">V168465</p>
+                                        </div>
+                                        <div class="mt-4">
+                                            <p class="text-gray-600 text-base mb-2">expedition</p>
+                                            <p class="font-semibold text-base text-red-500">Antaraja</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-4">
+                                        <p class="mb-2 mt-4 text-gray-600 text-sm">Box trucks</p>
+                                        <div class="bg-gray-200 w-[350px] h-[150px] rounded-lg shadow-lg">
+                                            <div class="card w-[263px] h-full bg-gradient-to-r from-red-300 via-red-400 to-red-500 rounded-l-lg"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         
                     </div>
                 </div>
@@ -475,6 +567,23 @@
                   }
               }
           }
+
+            var sideBar = document.getElementById("mobile-nav");
+            var openSidebar = document.getElementById("openSideBar");
+            var closeSidebar = document.getElementById("closeSideBar");
+            sideBar.style.transform = "translateX(-260px)";
+
+            function sidebarHandler(flag) {
+                if (flag) {
+                    sideBar.style.transform = "translateX(0px)";
+                    openSidebar.classList.add("hidden");
+                    closeSidebar.classList.remove("hidden");
+                } else {
+                    sideBar.style.transform = "translateX(-260px)";
+                    closeSidebar.classList.add("hidden");
+                    openSidebar.classList.remove("hidden");
+                }
+            }
         </script>
         <style>
             [x-cloak] {
