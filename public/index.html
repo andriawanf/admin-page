@@ -28,48 +28,50 @@
                        <span class="text-2xl font-bold z-30 text-white">Shipper-Men</span>
                     </a>
                     <div class="absolute right-0 float-right -mr-9 top-6 w-64 h-9 rounded-lg bg-red-500 shadow-lg " @click="sidebarOpen = !sidebarOpen" >
-                            <p class="text-right text-gray-600"><i class="bx bx-chevron-right bx-md"></i></p>
+                            <p class="text-right text-white"><i class="bx bx-chevron-right bx-md"></i></p>
                     </div>
                    <ul class="space-y-6 mb-10 ">
-                        <li class="flex w-full justify-between text-black cursor-pointer items-center">
+                        <li class="flex w-full justify-between text-black cursor-pointer items-center ">
                             <a href="javascript:void(0)" class="flex items-center gap-4">
                                 <i class="bx bx-time-five "></i>
-                                <span class="text-black font-medium text-sm  hover:text-blue-500 transition duration-300">Request</span>
+                                <span class="font-medium text-sm  hover:text-red-500 transition duration-300">Request</span>
                             </a>
                             <div class="py-1 px-3 bg-gray-600 rounded text-gray-300 flex items-center justify-center text-xs">16</div>
                         </li>
-                        <li class="flex w-full justify-between text-black cursor-pointer items-center">
+                        <li class="flex w-full justify-between text-black cursor-pointer items-center ">
                             <a href="javascript:void(0)" class="flex items-center gap-4">
                                 <i class="bx bx-bell"></i>
-                                <span class="text-black font-medium text-sm hover:text-blue-500 transition duration-300">Notification</span>
+                                <span class="text-black font-medium text-sm hover:text-red-500 transition duration-300">Notification</span>
                             </a>
                             <div class="py-1 px-3 bg-gray-600 rounded text-gray-300 flex items-center justify-center text-xs">5</div>
                         </li>
                    </ul>
                    <div class="pt-10 border-t">
                        <ul class="space-y-6 ">
-                           <li class="flex gap-4">
+                           <li class="flex gap-4 hover:border-l-2 hover:border-l-red-500 hover:px-4 transition duration-500">
                                <i class="bx bx-category "></i>
-                               <span class="text-sm font-medium ">Dashboard</span>
+                               <span class="text-sm font-medium hover:text-red-500  transition duration-300">Dashboard</span>
                            </li>
-                           <li class="flex gap-4">
-                               <i class="bx bx-trip "></i>
-                               <span class="text-sm font-medium">Shipments</span>
+                           <li class="flex gap-4 border-l-2 border-l-red-500 px-4">
+                                <a href="#shipper" class="flex gap-4  ">
+                                    <i class="bx bx-trip "></i>
+                                    <span class="text-sm font-medium text-red-500  transition duration-300">Shipments</span>
+                                </a>
                            </li>
-                           <li class="flex w-full justify-between items-center">
+                           <li class="flex w-full justify-between items-center hover:border-l-2 hover:border-l-red-500 hover:px-4 transition duration-500">
                                 <a href="/" class="flex items-center gap-4">
                                     <i class="bx bx-package "></i>
-                                    <span class="text-sm font-medium">Parcels</span>
+                                    <span class="text-sm font-medium hover:text-red-500 transition duration-300">Parcels</span>
                                 </a>
                                 <div class="py-1 px-3 bg-red-500  rounded text-white flex items-center justify-center text-xs">5</div>
                            </li>
-                           <li class="flex gap-4">
+                           <li class="flex gap-4 hover:border-l-2 hover:border-l-red-500 hover:px-4 transition duration-500">
                                <i class="bx bx-flag "></i>
-                               <span class="text-sm font-medium">Branches</span>
+                               <span class="text-sm font-medium hover:text-red-500 transition duration-300">Branches</span>
                            </li>
-                           <li class="flex gap-4">
+                           <li class="flex gap-4 hover:border-l-2 hover:border-l-red-500 hover:px-4 transition duration-500">
                                <i class="bx bx-group "></i>
-                               <span class="text-sm font-medium">Clients</span>
+                               <span class="text-sm font-medium hover:text-red-500 transition duration-300">Clients</span>
                            </li>
                        </ul>
                    </div>
@@ -381,7 +383,7 @@
                         </div>
 
                         <!-- Cols Card Two -->
-                        <div class="grid grid-cols-2 gap-4">
+                        <div class="grid grid-cols-2 gap-4 mb-8">
                             <div class="card bg-white shadow-lg px-4 py-4">
                                 <div class="flex justify-between">
                                     <div>
@@ -404,7 +406,7 @@
                                         </div>
                                         <div class="mt-4">
                                             <p class="text-gray-600 text-base mb-2">expedition</p>
-                                            <p class="font-semibold text-base text-red-500">JNT</p>
+                                            <p class="font-semibold text-base text-red-500">J&T</p>
                                         </div>
                                     </div>
 
@@ -438,7 +440,7 @@
                                         </div>
                                         <div class="mt-4">
                                             <p class="text-gray-600 text-base mb-2">expedition</p>
-                                            <p class="font-semibold text-base text-red-500">Antaraja</p>
+                                            <p class="font-semibold text-base text-red-500">TIKI</p>
                                         </div>
                                     </div>
 
