@@ -331,128 +331,42 @@
                 </div>
 
                 <div class="flex justify-between gap-6 mt-8">
-                    <div class="w-full">
-                        <div class="flex flex-wrap" id="tabs-id">
-                            <div class="w-full">
-                                <ul class="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row">
-                                    <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
-                                    <a class="text-xs font-bold uppercase px-2 py-2 shadow-lg rounded block leading-normal text-white bg-pink-600" onclick="changeAtiveTab(event,'tab-profile')">
-                                        Montly
-                                    </a>
-                                    </li>
-                                    <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
-                                    <a class="text-xs font-bold uppercase px-2 py-2 shadow-lg rounded block leading-normal text-pink-600 bg-white" onclick="changeAtiveTab(event,'tab-settings')">
-                                    Weekly
-                                    </a>
-                                    </li>
-                                    <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
-                                    <a class="text-xs font-bold uppercase px-2 py-2 shadow-lg rounded block leading-normal text-pink-600 bg-white" onclick="changeAtiveTab(event,'tab-options')">
-                                        Today
-                                    </a>
-                                    </li>
-                                </ul>
-                                <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
-                                    <div class="px-4 py-5 flex-auto">
-                                    <div class="tab-content tab-space">
-                                        <div class="block" id="tab-profile">
-                                        <p>
-                                            Collaboratively administrate empowered markets via
-                                            plug-and-play networks. Dynamically procrastinate B2C users
-                                            after installed base benefits.
-                                            <br />
-                                            <br />
-                                            Dramatically visualize customer directed convergence
-                                            without revolutionary ROI.
-                                        </p>
-                                        </div>
-                                        <div class="hidden" id="tab-settings">
-                                        <p>
-                                            Completely synergize resource taxing relationships via
-                                            premier niche markets. Professionally cultivate one-to-one
-                                            customer service with robust ideas.
-                                            <br />
-                                            <br />
-                                            Dynamically innovate resource-leveling customer service for
-                                            state of the art customer service.
-                                        </p>
-                                        </div>
-                                        <div class="hidden" id="tab-options">
-                                        <p>
-                                            Efficiently unleash cross-media information without
-                                            cross-media value. Quickly maximize timely deliverables for
-                                            real-time schemas.
-                                            <br />
-                                            <br />
-                                            Dramatically maintain clicks-and-mortar solutions
-                                            without functional solutions.
-                                        </p>
-                                        </div>
-                                    </div>
-                                    </div>
+                    <div class="w-full card bg-white shadow-lg rounded-lg p-4">
+                        <div class="flex justify-between">
+                            <h1 class="text-lg text-gray-800 font-semibold">Revenue</h1>
+                            <div class="flex flex-row gap-2">
+                                <div class="px-4 py-2 bg-gray-800 rounded-lg">
+                                    <p class="text-sm text-white">Monthly</p>
+                                </div>
+                                <div class="px-4 py-2 hover:bg-gray-800 rounded-lg">
+                                    <p class="text-sm text-gray-800 hover:text-white">Weekly</p>
+                                </div>
+                                <div class="px-4 py-2 hover:bg-gray-800 rounded-lg hover:text-white">
+                                    <p class="text-sm text-gray-800 hover:text-white">Today</p>
                                 </div>
                             </div>
                         </div>
+                        <div class=" overflow-hidden">
+                            <canvas class="" id="chartLine"></canvas>
+                        </div>
                     </div>
-                    <div class="w-full">
-                        <div class="flex flex-wrap" id="tabs-id">
-                            <div class="w-full">
-                            <ul class="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row">
-                                <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
-                                <a class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-white bg-pink-600" onclick="changeAtiveTab(event,'tab-profile')">
-                                    <i class="fas fa-space-shuttle text-base mr-1"></i>  Profile
-                                </a>
-                                </li>
-                                <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
-                                <a class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-pink-600 bg-white" onclick="changeAtiveTab(event,'tab-settings')">
-                                    <i class="fas fa-cog text-base mr-1"></i>  Settings
-                                </a>
-                                </li>
-                                <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
-                                <a class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-pink-600 bg-white" onclick="changeAtiveTab(event,'tab-options')">
-                                    <i class="fas fa-briefcase text-base mr-1"></i>  Options
-                                </a>
-                                </li>
-                            </ul>
-                            <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
-                                <div class="px-4 py-5 flex-auto">
-                                <div class="tab-content tab-space">
-                                    <div class="block" id="tab-profile">
-                                    <p>
-                                        Collaboratively administrate empowered markets via
-                                        plug-and-play networks. Dynamically procrastinate B2C users
-                                        after installed base benefits.
-                                        <br />
-                                        <br />
-                                        Dramatically visualize customer directed convergence
-                                        without revolutionary ROI.
-                                    </p>
-                                    </div>
-                                    <div class="hidden" id="tab-settings">
-                                    <p>
-                                        Completely synergize resource taxing relationships via
-                                        premier niche markets. Professionally cultivate one-to-one
-                                        customer service with robust ideas.
-                                        <br />
-                                        <br />
-                                        Dynamically innovate resource-leveling customer service for
-                                        state of the art customer service.
-                                    </p>
-                                    </div>
-                                    <div class="hidden" id="tab-options">
-                                    <p>
-                                        Efficiently unleash cross-media information without
-                                        cross-media value. Quickly maximize timely deliverables for
-                                        real-time schemas.
-                                        <br />
-                                        <br />
-                                        Dramatically maintain clicks-and-mortar solutions
-                                        without functional solutions.
-                                    </p>
-                                    </div>
+                    <div class="w-full card bg-white shadow-lg rounded-lg p-4">
+                        <div class="flex justify-between">
+                            <h1 class="text-lg text-gray-800 font-semibold">Revenue</h1>
+                            <div class="flex flex-row gap-2">
+                                <div class="px-4 py-2 bg-gray-800 rounded-lg">
+                                    <p class="text-sm text-white">Monthly</p>
                                 </div>
+                                <div class="px-4 py-2 hover:bg-gray-800 rounded-lg">
+                                    <p class="text-sm text-gray-800 hover:text-white">Weekly</p>
+                                </div>
+                                <div class="px-4 py-2 hover:bg-gray-800 rounded-lg">
+                                    <p class="text-sm text-gray-800 hover:text-white">Today</p>
                                 </div>
                             </div>
-                            </div>
+                        </div>
+                        <div class=" overflow-hidden">
+                            <canvas class="" id="myChart"></canvas>
                         </div>
                     </div>
                 </div>
@@ -596,31 +510,97 @@
             display: none;
         }
     </style>
-    <script type="text/javascript">
-        function changeAtiveTab(event,tabID){
-          let element = event.target;
-          while(element.nodeName !== "A"){
-            element = element.parentNode;
-          }
-          ulElement = element.parentNode.parentNode;
-          aElements = ulElement.querySelectorAll("li > a");
-          tabContents = document.getElementById("tabs-id").querySelectorAll(".tab-content > div");
-          for(let i = 0 ; i < aElements.length; i++){
-            aElements[i].classList.remove("text-white");
-            aElements[i].classList.remove("bg-pink-600");
-            aElements[i].classList.add("text-pink-600");
-            aElements[i].classList.add("bg-white");
-            tabContents[i].classList.add("hidden");
-            tabContents[i].classList.remove("block");
-          }
-          element.classList.remove("text-pink-600");
-          element.classList.remove("bg-white");
-          element.classList.add("text-white");
-          element.classList.add("bg-pink-600");
-          document.getElementById(tabID).classList.remove("hidden");
-          document.getElementById(tabID).classList.add("block");
-        }
-      </script>
+    <!-- Required chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Chart line -->
+    <!-- <script>
+    const labels = ["January", "February", "March", "April", "May", "June"];
+    const data = {
+        labels: labels,
+        datasets: [
+        {
+            label: "Revenue",
+            backgroundColor: "#ef4444",
+            borderColor: "#ef4444",
+            data: [0, 10, 5, 2, 20, 30, 45],
+        },
+        ],
+    };
+
+    const configLineChart = {
+        type: "line",
+        data,
+        options: {},
+    };
+
+    var chartLine = new Chart(
+        document.getElementById("chartLine"),
+        configLineChart
+    );
+    </script> -->
+
+    <!-- bar chart -->
+    <script>
+        const DATA_COUNT = 7;
+        const NUMBER_CFG = {count: DATA_COUNT, min: -100, max: 100};
+
+        const labels = Utils.months({count: 7});
+        const data = {
+            labels: labels,
+            datasets: [
+                {
+                label: 'Fully Rounded',
+                data: Utils.numbers(NUMBER_CFG),
+                borderColor: Utils.CHART_COLORS.red,
+                backgroundColor: Utils.transparentize(Utils.CHART_COLORS.red, 0.5),
+                borderWidth: 2,
+                borderRadius: Number.MAX_VALUE,
+                borderSkipped: false,
+                },
+                {
+                label: 'Small Radius',
+                data: Utils.numbers(NUMBER_CFG),
+                borderColor: Utils.CHART_COLORS.blue,
+                backgroundColor: Utils.transparentize(Utils.CHART_COLORS.blue, 0.5),
+                borderWidth: 2,
+                borderRadius: 5,
+                borderSkipped: false,
+                }
+            ]
+        };
+        const actions = [
+        {
+            name: 'Randomize',
+            handler(chart) {
+            chart.data.datasets.forEach(dataset => {
+                dataset.data = Utils.numbers({count: chart.data.labels.length, min: -100, max: 100});
+            });
+            chart.update();
+            }
+        },
+        ];
+        const config = {
+            type: 'bar',
+            data: data,
+            options: {
+                responsive: true,
+                plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Chart.js Bar Chart'
+                }
+                }
+            },
+        };
+        var myChart = new Chart(
+        document.getElementById("myChart"),
+        config
+    );
+    </script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
 </body>
 </html>
