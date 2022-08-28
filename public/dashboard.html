@@ -177,7 +177,7 @@
                                                 <i class="bx bx-calendar bx-sm"></i>
                                             </div>
                                             <div 
-                                                class="bg-white mt-12 rounded-lg shadow p-4 absolute top-0 left-0" 
+                                                class="bg-white mt-12 rounded-lg shadow p-4 absolute top-0 -left-24" 
                                                 style="width: 17rem" 
                                                 x-show.transition="showDatepicker"
                                                 @click.away="showDatepicker = false">
@@ -194,7 +194,7 @@
                                                             :class="{'cursor-not-allowed opacity-25': month == 0 }"
                                                             :disabled="month == 0 ? true : false"
                                                             @click="month--; getNoOfDays()">
-                                                            <svg class="h-6 w-6 text-gray-500 inline-flex"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <svg class="h-6 w-6 text-gray-500 inline-flex"  fill="none" viewbox="0 0 24 24" stroke="currentColor">
                                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
                                                             </svg>  
                                                         </button>
@@ -204,7 +204,7 @@
                                                             :class="{'cursor-not-allowed opacity-25': month == 11 }"
                                                             :disabled="month == 11 ? true : false"
                                                             @click="month++; getNoOfDays()">
-                                                            <svg class="h-6 w-6 text-gray-500 inline-flex"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <svg class="h-6 w-6 text-gray-500 inline-flex"  fill="none" viewbox="0 0 24 24" stroke="currentColor">
                                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                                                             </svg>									  
                                                         </button>
@@ -233,8 +233,8 @@
                                                             <div
                                                                 @click="getDateValue(date)"
                                                                 x-text="date"
-                                                                class="cursor-pointer text-center text-sm leading-none rounded-full leading-loose transition ease-in-out duration-100"
-                                                                :class="{'bg-blue-500 text-white': isToday(date) == true, 'text-gray-700 hover:bg-blue-200': isToday(date) == false }"	
+                                                                class="cursor-pointer text-center text-sm leading-none rounded-full transition ease-in-out duration-100"
+                                                                :class="{'bg-red-500 text-white': isToday(date) == true, 'text-gray-700 hover:bg-blue-200': isToday(date) == false }"	
                                                             ></div>
                                                         </div>
                                                     </template>
@@ -255,7 +255,7 @@
                 <div class="mt-8">
                     <h1 class="text-gray-800 font-semibold text-xl leading-relaxed">Dashboard Admin</h1>
                 </div>
-                <div class="mt-8 flex gap-6 justify-between items-center z-50">
+                <div class="mt-8 flex gap-6 justify-between items-center -z-50 relative">
                     <div class="card px-4 py-4 w-full bg-gradient-to-r from-red-300 via-red-400 to-red-500 drop-shadow-lg rounded-xl">
                         <div class="flex justify-between gap-20">
                             <div>
@@ -419,7 +419,7 @@
                         <label for="table-search" class="sr-only">Search</label>
                         <div class="relative">
                             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                                <svg class="w-5 h-5 text-gray-800 dark:text-gray-400" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+                                <svg class="w-5 h-5 text-gray-800 dark:text-gray-400" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
                             </div>
                             <input type="text" id="table-search" class="block p-2 pl-10 w-80 text-sm text-gray-800 bg-gray-50 rounded-lg border border-gray-300 focus:ring-gray-800 focus:border-gray-800 " placeholder="Search for items">
                         </div>
